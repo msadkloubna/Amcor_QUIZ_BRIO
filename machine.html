@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certification Machine à Laver — Amcor Flexibles Mohammedia</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue-deep:#003087;--blue-mid:#1A4DAD;--blue-light:#4A7FE0;
+    --teal:#007A7A;--teal-light:#00A3A3;
+    --white:#FFFFFF;
+    --text:#0D1B2E;--text-mid:#2E456A;--text-muted:#6078A0;
+    --border:#C8D5E8;--bg:#EDF1F9;--bg-card:#FFFFFF;
+    --shadow:0 2px 16px rgba(0,48,135,0.10);--shadow-lg:0 8px 40px rgba(0,48,135,0.18);
+    --radius:14px;--radius-sm:8px;
+    --grad: linear-gradient(135deg, #003087 0%, #1A4DAD 50%, #007A7A 80%, #00A3A3 100%);
+    --grad-h: linear-gradient(90deg, #003087 0%, #1A4DAD 50%, #007A7A 80%, #00A3A3 100%);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.55;
+    background-image:
+      radial-gradient(ellipse at 90% 0%, rgba(0,163,163,0.09) 0%, transparent 50%),
+      radial-gradient(ellipse at 5% 100%, rgba(0,48,135,0.08) 0%, transparent 45%);}
+
+  .topbar{background:var(--grad);padding:0 48px;height:76px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 24px rgba(0,48,135,0.45);position:sticky;top:0;z-index:100;}
+  .topbar-left{display:flex;align-items:center;gap:20px;}
+  .logo-wrap{background:white;border-radius:10px;padding:5px 12px;display:flex;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,0.15);}
+  .logo-img{height:38px;width:auto;display:block;}
+  .divider-line{width:1px;height:36px;background:rgba(255,255,255,0.28);}
+  .site-name{font-family:"Sora",sans-serif;font-size:15px;font-weight:700;color:#fff;line-height:1.2;}
+  .site-name span{display:block;font-weight:400;font-size:11px;color:rgba(255,255,255,0.65);letter-spacing:1.5px;text-transform:uppercase;font-family:"DM Sans",sans-serif;margin-top:2px;}
+  .topbar-badge{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.25);border-radius:20px;padding:6px 16px;font-size:12px;color:rgba(255,255,255,0.92);font-weight:500;}
+  .topbar-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;opacity:0.85;flex-shrink:0;animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:0.85;transform:scale(1);}50%{opacity:0.4;transform:scale(0.8);}}
+
+  .wrapper{max-width:820px;margin:0 auto;padding:44px 24px 90px;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+  #form-screen{animation:fadeUp 0.5s ease;}
+
+  .form-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:48px 52px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;}
+  .form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad-h);}
+  .form-logo-header{display:flex;align-items:center;gap:18px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+  .form-logo-box{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:8px 16px;display:flex;align-items:center;}
+  .form-logo-box img{height:44px;width:auto;}
+  .form-company-name{font-family:"Sora",sans-serif;font-size:16px;font-weight:700;color:var(--blue-deep);}
+  .form-company-name span{display:block;font-size:11px;font-weight:400;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
+  .form-title{font-family:"Sora",sans-serif;font-size:22px;font-weight:800;color:var(--blue-deep);margin-bottom:8px;}
+  .form-sub{font-size:14px;color:var(--text-muted);margin-bottom:32px;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px;}
+  .form-group{display:flex;flex-direction:column;gap:6px;}
+  .form-group label{font-size:12px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-mid);}
+  .form-group input,.form-group select{padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:14.5px;font-family:"DM Sans",sans-serif;color:var(--text);background:var(--bg);outline:none;transition:border-color 0.2s;}
+  .form-group input:focus,.form-group select:focus{border-color:var(--blue-light);background:#fff;}
+  .datetime-display{background:linear-gradient(135deg,rgba(0,48,135,0.05),rgba(0,163,163,0.04));border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:28px;display:flex;align-items:center;gap:16px;}
+  .datetime-icon{font-size:28px;}
+  .datetime-vals{display:flex;gap:24px;}
+  .datetime-item label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:2px;}
+  .datetime-item span{font-family:"Sora",sans-serif;font-size:16px;font-weight:700;color:var(--blue-deep);}
+
+  .page-header{margin-bottom:36px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;}
+  .page-header-text h1{font-family:"Sora",sans-serif;font-size:24px;font-weight:800;color:var(--blue-deep);margin-bottom:6px;}
+  .page-header-text p{font-size:13.5px;color:var(--text-muted);max-width:440px;line-height:1.5;}
+  .amcor-emblem{width:52px;height:52px;background:var(--grad);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,122,122,0.3);}
+
+  .stats-row{display:flex;gap:14px;margin-bottom:28px;}
+  .stat-box{flex:1;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow);position:relative;overflow:hidden;}
+  .stat-box::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;border-radius:0 0 var(--radius) var(--radius);}
+  .stat-box.s-blue::after{background:var(--grad-h);}
+  .stat-box.s-green::after{background:linear-gradient(90deg,var(--blue-deep),var(--blue-light));}
+  .stat-box.s-red::after{background:linear-gradient(90deg,#B02020,#E85A52);}
+  .stat-box.s-teal::after{background:linear-gradient(90deg,var(--teal),var(--teal-light));}
+  .stat-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+  .stat-icon.blue{background:rgba(0,48,135,0.08);}
+  .stat-icon.green{background:rgba(26,77,173,0.08);}
+  .stat-icon.red{background:rgba(176,32,32,0.08);}
+  .stat-icon.teal{background:rgba(0,122,122,0.08);}
+  .stat-label{font-size:10.5px;color:var(--text-muted);letter-spacing:0.8px;text-transform:uppercase;font-weight:600;margin-bottom:2px;}
+  .stat-value{font-family:"Sora",sans-serif;font-size:22px;font-weight:800;color:var(--text);line-height:1;}
+
+  .progress-block{margin-bottom:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 20px;box-shadow:var(--shadow);}
+  .progress-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;margin-bottom:10px;}
+  .progress-meta span:first-child{color:var(--text-mid);font-weight:600;font-size:12px;letter-spacing:0.5px;text-transform:uppercase;}
+  .prog-counter{font-family:"Sora",sans-serif;font-size:13px;font-weight:700;color:var(--teal);}
+  .progress-track{height:7px;background:var(--border);border-radius:4px;overflow:hidden;}
+  .progress-fill{height:100%;background:var(--grad-h);border-radius:4px;width:0%;transition:width 0.6s cubic-bezier(0.34,1.56,0.64,1);}
+
+  .timer-block{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .timer-label{font-size:12px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-muted);}
+  .timer-track{flex:1;height:10px;background:var(--border);border-radius:5px;overflow:hidden;}
+  .timer-fill{height:100%;border-radius:5px;transition:width 1s linear,background 0.5s;width:100%;background:var(--blue-light);}
+  .timer-num{font-family:"Sora",sans-serif;font-size:18px;font-weight:800;min-width:28px;text-align:right;color:var(--text);}
+  .timer-num.urgent{color:#D93025;animation:blink 0.5s infinite;}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0.35}}
+
+  .question-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:40px 44px;margin-bottom:20px;box-shadow:var(--shadow-lg);animation:fadeUp 0.38s cubic-bezier(0.23,1,0.32,1);position:relative;overflow:hidden;}
+  .question-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--grad);border-radius:5px 0 0 5px;}
+  .q-num-bg{position:absolute;right:-10px;top:-10px;font-family:"Sora",sans-serif;font-size:90px;font-weight:800;color:rgba(0,48,135,0.04);line-height:1;user-select:none;pointer-events:none;}
+
+  .q-module-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:8px;}
+  .q-module-tag.module-remplissage{background:rgba(0,48,135,0.08);color:var(--blue-mid);border:1px solid rgba(0,48,135,0.2);}
+  .q-module-tag.module-lavage{background:rgba(0,122,122,0.09);color:var(--teal);border:1px solid rgba(0,122,122,0.22);}
+  .q-module-tag.module-vidange{background:rgba(26,77,173,0.09);color:var(--blue-light);border:1px solid rgba(26,77,173,0.22);}
+  .q-module-tag.module-securite{background:rgba(176,32,32,0.08);color:#B02020;border:1px solid rgba(176,32,32,0.2);}
+  .q-module-tag.module-entretien{background:rgba(0,163,163,0.07);color:var(--teal-light);border:1px solid rgba(0,163,163,0.18);}
+
+  .q-tag{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--blue-light);background:rgba(0,48,135,0.07);border:1px solid rgba(0,48,135,0.15);padding:5px 14px;border-radius:20px;margin-bottom:8px;}
+  .question-text{font-size:17.5px;font-weight:600;color:var(--text);margin-bottom:30px;line-height:1.55;}
+
+  .options{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .option{display:flex;align-items:flex-start;gap:14px;padding:15px 20px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:all 0.18s ease;background:var(--bg-card);}
+  .option:hover{border-color:var(--blue-light);background:rgba(0,48,135,0.03);transform:translateX(4px);box-shadow:0 2px 12px rgba(0,48,135,0.09);}
+  .opt-letter{width:32px;height:32px;min-width:32px;border-radius:8px;background:var(--bg);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12.5px;color:var(--text-mid);transition:all 0.18s;font-family:"Sora",sans-serif;margin-top:1px;}
+  .opt-text{font-size:14.5px;color:var(--text);line-height:1.5;padding-top:2px;}
+
+  .option.correct{border-color:var(--blue-deep);background:rgba(0,48,135,0.06);transform:none;}
+  .option.correct .opt-letter{background:var(--blue-deep);border-color:var(--blue-deep);color:#fff;}
+  .option.wrong{border-color:#D93025;background:rgba(217,48,37,0.06);transform:none;}
+  .option.wrong .opt-letter{background:#D93025;border-color:#D93025;color:#fff;}
+  .option.timeout{border-color:#B02020;background:rgba(176,32,32,0.06);transform:none;}
+  .option.timeout .opt-letter{background:#B02020;border-color:#B02020;color:#fff;}
+
+  .option.disabled{cursor:default;}
+  .option.disabled:hover{transform:none;box-shadow:none;border-color:var(--border);background:var(--bg-card);}
+  .option.correct.disabled:hover{border-color:var(--blue-deep);background:rgba(0,48,135,0.06);}
+  .option.wrong.disabled:hover{border-color:#D93025;background:rgba(217,48,37,0.06);}
+  .option.timeout.disabled:hover{border-color:#B02020;background:rgba(176,32,32,0.06);}
+
+  .explanation{margin-top:24px;padding:18px 22px;background:linear-gradient(135deg,rgba(0,48,135,0.05),rgba(0,163,163,0.04));border-left:4px solid var(--teal-light);border-radius:0 10px 10px 0;display:none;animation:fadeUp 0.3s ease;}
+  .exp-label{font-size:10.5px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--blue-deep);margin-bottom:7px;display:flex;align-items:center;gap:6px;}
+  .explanation p{font-size:14px;color:var(--text-mid);line-height:1.65;}
+
+  .nav-row{display:flex;justify-content:space-between;align-items:center;}
+  .btn{font-family:"Sora",sans-serif;font-weight:700;font-size:13px;letter-spacing:0.3px;padding:13px 30px;border:none;border-radius:10px;cursor:pointer;transition:all 0.2s ease;}
+  .btn-outline{background:var(--bg-card);color:var(--blue-deep);border:1.5px solid var(--border);}
+  .btn-outline:hover{border-color:var(--blue-deep);background:rgba(0,48,135,0.04);}
+  .btn-outline:disabled{opacity:0.3;cursor:default;}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 4px 16px rgba(0,48,135,0.28);}
+  .btn-primary:hover{box-shadow:0 6px 24px rgba(0,122,122,0.32);transform:translateY(-1px);}
+  .nav-status{font-size:13px;font-weight:600;color:var(--text-muted);display:flex;align-items:center;gap:6px;}
+
+  #score-screen{display:none;animation:fadeUp 0.5s cubic-bezier(0.23,1,0.32,1);}
+  .score-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:60px 52px;text-align:center;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;}
+  .score-card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad-h);}
+  .score-ring{width:170px;height:170px;margin:0 auto 40px;position:relative;filter:drop-shadow(0 6px 20px rgba(0,48,135,0.2));}
+  .score-ring svg{width:100%;height:100%;transform:rotate(-90deg);}
+  .score-ring circle{fill:none;stroke-width:11;}
+  .ring-track{stroke:var(--border);}
+  .ring-fill{stroke:var(--blue-deep);stroke-dasharray:440;stroke-dashoffset:440;stroke-linecap:round;transition:stroke-dashoffset 1.4s cubic-bezier(0.34,1.56,0.64,1);}
+  .score-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .score-num{font-family:"Sora",sans-serif;font-size:50px;font-weight:800;color:var(--text);line-height:1;}
+  .score-den{font-size:14px;color:var(--text-muted);margin-top:2px;font-weight:500;}
+  .score-title{font-family:"Sora",sans-serif;font-size:24px;font-weight:800;color:var(--blue-deep);margin-bottom:12px;}
+  .score-msg{font-size:15.5px;color:var(--text-mid);max-width:440px;margin:0 auto 40px;line-height:1.65;}
+  .chips-row{display:flex;justify-content:center;gap:12px;margin-bottom:44px;flex-wrap:wrap;}
+  .chip{padding:10px 24px;border-radius:10px;font-size:13.5px;font-weight:700;font-family:"Sora",sans-serif;}
+  .chip-blue{background:rgba(0,48,135,0.08);color:var(--blue-deep);border:1.5px solid rgba(0,48,135,0.18);}
+  .chip-red{background:rgba(217,48,37,0.08);color:#D93025;border:1.5px solid rgba(217,48,37,0.2);}
+  .chip-teal{background:rgba(0,122,122,0.07);color:var(--teal);border:1.5px solid rgba(0,122,122,0.15);}
+  .score-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .btn-save{background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid));color:#fff;box-shadow:0 4px 16px rgba(0,48,135,0.28);padding:15px 36px;font-size:14px;}
+  .btn-save:hover{box-shadow:0 6px 24px rgba(0,48,135,0.38);transform:translateY(-1px);}
+
+  @media(max-width:620px){.topbar{padding:0 16px;height:68px;}.topbar-badge{display:none;}.question-card{padding:26px 22px;}.stats-row{flex-wrap:wrap;}.score-card{padding:36px 22px;}.wrapper{padding:24px 16px 70px;}.page-header{flex-direction:column;}.amcor-emblem{display:none;}.form-grid{grid-template-columns:1fr;}.form-card{padding:28px 22px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="logo-wrap"><img id="topbar-logo" class="logo-img" src="amcor.png" alt="Amcor Flexibles"></div>
+    <div class="divider-line"></div>
+    <div class="site-name">Amcor Flexibles<span>Mohammedia · Maroc</span></div>
+  </div>
+  <div class="topbar-badge">Certification Opérationnelle · Machine à Laver</div>
+</div>
+
+<!-- FORM -->
+<div class="wrapper" id="form-screen">
+  <div class="form-card">
+    <div class="form-logo-header">
+      <div class="form-logo-box"><img src="amcor.png" alt="Amcor" style="height:44px;width:auto;"></div>
+      <div class="form-company-name">Amcor Flexibles<span>Mohammedia · Maroc</span></div>
+    </div>
+    <div class="form-title">🧼 Certification Machine à Laver — Identification</div>
+    <div class="form-sub">Veuillez renseigner vos informations avant de démarrer le quiz.</div>
+    <div class="datetime-display">
+      <div class="datetime-icon">🗓️</div>
+      <div class="datetime-vals">
+        <div class="datetime-item"><label>Date</label><span id="form-date">—</span></div>
+        <div class="datetime-item"><label>Heure</label><span id="form-time">—</span></div>
+      </div>
+    </div>
+    <div class="form-grid">
+      <div class="form-group"><label>Nom complet *</label><input type="text" id="f-nom" placeholder="Ex : Mohamed Alami" required></div>
+      <div class="form-group"><label>Matricule *</label><input type="text" id="f-matricule" placeholder="Ex : AMC-2024-007" required></div>
+      <div class="form-group"><label>Poste / Fonction *</label><input type="text" id="f-poste" placeholder="Ex : Conducteur Machine à Laver" required></div>
+      <div class="form-group"><label>Équipe *</label>
+        <select id="f-equipe" required>
+          <option value="">— Sélectionner —</option>
+          <option>Équipe A (Matin)</option>
+          <option>Équipe B (Après-midi)</option>
+          <option>Équipe C (Nuit)</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Responsable de Production *</label><input type="text" id="f-responsable" placeholder="Nom du responsable" required></div>
+      <div class="form-group"><label>Département *</label><input type="text" id="f-dept" value="Production Flexibles" required></div>
+    </div>
+    <button class="btn btn-primary" onclick="startQuiz()" style="width:100%;padding:16px;font-size:15px;">🚀 Démarrer la certification (25 questions · 25 s / question)</button>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div class="wrapper" id="quiz-section" style="display:none;">
+  <div class="page-header">
+    <div class="page-header-text">
+      <h1>Certification Opérationnelle — Machine à Laver</h1>
+      <p>25 questions · 25 secondes par question · 3 choix par question (A, B ou C).</p>
+    </div>
+    <div class="amcor-emblem">🧼</div>
+  </div>
+  <div class="stats-row">
+    <div class="stat-box s-blue"><div class="stat-icon blue">📋</div><div><div class="stat-label">Total</div><div class="stat-value" id="stat-total">25</div></div></div>
+    <div class="stat-box s-green"><div class="stat-icon green">✅</div><div><div class="stat-label">Correctes</div><div class="stat-value" id="stat-correct">0</div></div></div>
+    <div class="stat-box s-red"><div class="stat-icon red">❌</div><div><div class="stat-label">Fausses</div><div class="stat-value" id="stat-wrong">0</div></div></div>
+    <div class="stat-box s-teal"><div class="stat-icon teal">🎯</div><div><div class="stat-label">Score</div><div class="stat-value" id="stat-pct">—</div></div></div>
+  </div>
+  <div class="progress-block">
+    <div class="progress-meta"><span>Progression</span><span class="prog-counter" id="prog-label">1 / 25</span></div>
+    <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+  </div>
+  <div class="timer-block">
+    <span class="timer-label">⏱ Temps</span>
+    <div class="timer-track"><div class="timer-fill" id="timer-fill"></div></div>
+    <span class="timer-num" id="timer-num">25</span>
+  </div>
+  <div class="question-card" id="question-card">
+    <div class="q-num-bg" id="q-num-bg">01</div>
+    <div id="q-module-tag" class="q-module-tag module-remplissage">💧 Remplissage</div>
+    <div class="q-tag" id="q-tag">Question 01 / 25</div>
+    <div class="question-text" id="question-text"></div>
+    <ul class="options" id="options-list"></ul>
+    <div class="explanation" id="explanation"><div class="exp-label">💡 Explication</div><p id="exp-text"></p></div>
+  </div>
+  <div class="nav-row">
+    <button class="btn btn-outline" id="prev-btn" onclick="changeQuestion(-1)" disabled>← Précédent</button>
+    <span class="nav-status" id="nav-status"></span>
+    <button class="btn btn-primary" id="next-btn" onclick="changeQuestion(1)">Suivant →</button>
+  </div>
+</div>
+
+<!-- SCORE -->
+<div class="wrapper" id="score-screen">
+  <div class="score-card">
+    <div class="score-ring">
+      <svg viewBox="0 0 160 160"><circle class="ring-track" cx="80" cy="80" r="70"/><circle class="ring-fill" id="ring-fill" cx="80" cy="80" r="70"/></svg>
+      <div class="score-center"><div class="score-num" id="sc-num">0</div><div class="score-den" id="sc-den">/ 25</div></div>
+    </div>
+    <div class="score-title" id="sc-title">Résultat</div>
+    <div class="score-msg" id="sc-msg"></div>
+    <div class="chips-row">
+      <div class="chip chip-blue" id="chip-ok">✓ 0 correctes</div>
+      <div class="chip chip-red" id="chip-ko">✗ 0 incorrectes</div>
+      <div class="chip chip-teal" id="chip-pct">0%</div>
+    </div>
+    <div class="score-btns">
+      <button class="btn btn-save" onclick="downloadFiche()">🖨️ Imprimer / Enregistrer PDF</button>
+      <button class="btn btn-primary" onclick="restart()">🔄 Revenir au quiz</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const LOGO_B64="amcor.png";
+const TIMER_DURATION=25, LETTERS=['A','B','C'];
+
+// ── BASE QUESTIONS (25 questions, 3 options chacune, 1ère option = correcte) ──
+const BASE_QUESTIONS=[
+  // REMPLISSAGE (LAV-NET-01)
+  {m:'remplissage',q:"Quelle est la première vérification à effectuer avant de remplir la machine à laver de dissolvant propre ?",
+   opts:["Vérifier le niveau du dissolvant propre dans le réservoir de la bague","Appuyer directement sur RELLENADO LAVADORA","Ouvrir la valve H5 avant tout"],
+   exp:"Il faut d'abord vérifier que le réservoir de dissolvant propre de la bague dispose d'un niveau minimum suffisant pour alimenter la machine."},
+  {m:'remplissage',q:"Quelle valve doit être ouverte pour lancer le remplissage de la machine à laver ?",
+   opts:["La valve H2, située à gauche de la machine à laver","La valve H5","La valve H4"],
+   exp:"La valve H2 doit être ouverte pour permettre l'alimentation en dissolvant propre lors du remplissage."},
+  {m:'remplissage',q:"Comment démarre-t-on la pompe de remplissage de la machine à laver ?",
+   opts:["Appuyer sur le bouton RELLENADO LAVADORA (Bomba de llenado) sur l'armoire extérieure","Appuyer sur le bouton vert PROGRAMA","Actionner la valve H1 puis attendre"],
+   exp:"La pompe se démarre via le bouton RELLENADO LAVADORA sur l'armoire électrique extérieure à la salle."},
+  {m:'remplissage',q:"Que signifie l'extinction du pilote BOYA LAVADORA MIN lors du remplissage ?",
+   opts:["La pompe s'arrête automatiquement car le niveau minimum est atteint","Le remplissage a échoué","Il faut relancer manuellement la pompe"],
+   exp:"Lorsque BOYA LAVADORA MIN s'éteint, cela indique que le niveau minimum est atteint et la pompe s'arrête automatiquement."},
+  {m:'remplissage',q:"Que doit-on faire immédiatement après l'arrêt de la pompe de remplissage ?",
+   opts:["Fermer immédiatement la valve H2 pour isoler le circuit","Laisser la valve H2 ouverte pour le prochain remplissage","Ouvrir la valve H5"],
+   exp:"Dès que la pompe s'arrête, la valve H2 doit être fermée immédiatement pour isoler le circuit de remplissage."},
+  // LAVAGE (LAV-NET-02)
+  {m:'lavage',q:"Comment ouvre-t-on la porte de la machine à laver pour charger le panier ?",
+   opts:["En appuyant sur le bouton d'ouverture situé à côté de la machine","En tirant manuellement sur la poignée","En actionnant la valve H1"],
+   exp:"La porte s'ouvre en appuyant sur le bouton d'ouverture prévu à cet effet, situé à côté de la machine à laver."},
+  {m:'lavage',q:"Comment faut-il disposer les pièces dans le panier de la machine à laver ?",
+   opts:["Sans les superposer, pour que les injecteurs supérieurs et inférieurs puissent les atteindre","Empilées pour optimiser l'espace","En une seule rangée verticale"],
+   exp:"Les pièces doivent être placées sans superposition pour permettre un accès optimal aux injecteurs haut et bas."},
+  {m:'lavage',q:"Quelle configuration de valves est requise avant de lancer un cycle de lavage ?",
+   opts:["Valve H1 ouverte et valve H5 fermée","Valve H1 fermée et valve H5 ouverte","Les deux valves H1 et H5 ouvertes"],
+   exp:"Pour le lavage, la valve H1 doit être ouverte et la valve H5 fermée afin de diriger correctement le dissolvant."},
+  {m:'lavage',q:"Quel bouton lance le programme de lavage sur la machine à laver ?",
+   opts:["Le bouton vert PROGRAMA, à côté de la machine","Le bouton orange RELLENADO","Le bouton VACIAR LAVADORA"],
+   exp:"Le bouton vert PROGRAMA, positionné à côté de la machine, démarre le cycle de lavage et allume le pilote PROGRAMA."},
+  {m:'lavage',q:"Que se passe-t-il après la fin du temps de lavage programmé ?",
+   opts:["Le pilote ACLARAR s'allume : attendre 12 secondes pour le rinçage final, puis 3 min 10 s pour la redescente du dissolvant","La machine s'arrête immédiatement et la porte s'ouvre","Le cycle recommence automatiquement"],
+   exp:"Après le lavage, ACLARAR s'allume (rinçage 12 s), suivi de 3 min 10 s pour que le dissolvant redescende dans le réservoir."},
+  {m:'lavage',q:"Que signifient les pilotes ASPIRATION INT et VENTILADOR allumés pendant le lavage ?",
+   opts:["L'aspirateur de vapeurs est en marche et les hublots supérieurs sont ouverts","Il y a une anomalie à signaler","Le cycle de rinçage est terminé"],
+   exp:"Ces deux pilotes allumés indiquent que l'aspirateur de vapeurs fonctionne et que les hublots supérieurs sont ouverts pour ventiler."},
+  {m:'lavage',q:"Avant d'ouvrir la porte après un cycle de lavage, quelle condition doit être remplie ?",
+   opts:["Attendre l'extinction des pilotes ASPIRATION INT et VENTILADOR","Ouvrir dès que le pilote PROGRAMA s'éteint","Attendre uniquement 30 secondes"],
+   exp:"Il est obligatoire d'attendre que les pilotes ASPIRATION INT et VENTILADOR soient éteints avant d'ouvrir la porte."},
+  // VIDANGE (LAV-NET-03)
+  {m:'vidange',q:"Quelle est la première action avant de vider le réservoir de dissolvant de la machine ?",
+   opts:["Remuer le dissolvant dans le réservoir pour déloger les dépôts de peinture","Ouvrir directement la valve H5","Appuyer sur VACIAR LAVADORA immédiatement"],
+   exp:"Il faut remuer le dissolvant sale avant toute vidange pour déloger les dépôts de peinture et les impuretés accumulées."},
+  {m:'vidange',q:"Quelle modification de valves est nécessaire avant de lancer la vidange ?",
+   opts:["Fermer la valve H1 et ouvrir la valve H5","Ouvrir la valve H1 et fermer la valve H5","Ouvrir H1, H4 et H5 simultanément"],
+   exp:"Pour la vidange, on ferme H1 et on ouvre H5 afin d'orienter le flux vers le circuit de vidange."},
+  {m:'vidange',q:"À combien de minutes doit-on régler le temporisateur avant de lancer la vidange ?",
+   opts:["5 minutes","10 minutes","2 minutes"],
+   exp:"Le temporisateur doit être réglé sur 5 minutes avant d'appuyer sur le bouton vert PROGRAMA pour lancer la vidange."},
+  {m:'vidange',q:"Comment effectue-t-on une vidange partielle de la machine à laver ?",
+   opts:["Sélecteur en position I (VACIAR EN PARTE) → appuyer sur VACIAR LAVADORA (arrêt automatique au niveau minimum)","Sélecteur en position II puis arrêt manuel","Appuyer sur PROGRAMA sans modifier le sélecteur"],
+   exp:"La vidange partielle utilise la position I (VACIAR EN PARTE) ; la pompe s'arrête automatiquement au niveau minimum (pilote BOYA LAVADORA MIN)."},
+  {m:'vidange',q:"Comment effectue-t-on une vidange totale de la machine à laver ?",
+   opts:["Sélecteur en position II (VACIAR TOTALMENTE) → appuyer sur VACIAR LAVADORA → arrêt MANUEL","Sélecteur en position I avec arrêt automatique","Ouvrir H4 puis attendre que le réservoir se vide naturellement"],
+   exp:"La vidange totale utilise la position II (VACIAR TOTALMENTE) et nécessite un arrêt manuel contrairement à la vidange partielle."},
+  {m:'vidange',q:"Que doit-on faire après une vidange (partielle ou totale) avant toute opération suivante ?",
+   opts:["Remettre la durée de lavage correcte sur le temporisateur et rétablir H1 ouvert / H5 fermé","Laisser le temporisateur sur 5 min pour le prochain lavage","Garder H5 ouvert pour accélérer le prochain remplissage"],
+   exp:"Après vidange, on remet le bon temps de lavage sur le temporisateur et on rétablit les valves : H1 ouverte, H5 fermée."},
+  // SÉCURITÉ (LAV-NET-04)
+  {m:'securite',q:"Quels EPI sont obligatoires pour toute intervention sur la machine à laver ?",
+   opts:["Lunettes de protection, Gants et Bouchons d'oreilles","Casque, gilet fluorescent et masque FFP2","Chaussures de sécurité uniquement"],
+   exp:"Les EPI obligatoires pour toute intervention sur la machine à laver sont : lunettes de protection, gants et bouchons d'oreilles."},
+  {m:'securite',q:"Lors du nettoyage des filtres intérieurs, quelle consigne de sécurité est OBLIGATOIRE ?",
+   opts:["Mettre les vis de sécurité sur la porte pour éviter une chute accidentelle","Laisser la porte ouverte en s'appuyant dessus","Nettoyer les filtres porte fermée"],
+   exp:"Lors de l'ouverture de la porte pour nettoyer les filtres internes, les vis de sécurité sont OBLIGATOIRES pour éviter la chute de la porte."},
+  {m:'securite',q:"Que doit-on faire immédiatement en cas d'anomalie pendant le fonctionnement ?",
+   opts:["Fermer la porte → Arrêt machine → Ouvrir la porte → Ventilation","Continuer le cycle en signalant l'anomalie après","Ouvrir la porte immédiatement pour inspecter"],
+   exp:"En cas d'urgence : fermer la porte, arrêter la machine, puis ouvrir la porte et ventiler pour éviter tout risque."},
+  {m:'securite',q:"Pourquoi la cheminée doit-elle toujours être ouverte pendant le fonctionnement ?",
+   opts:["Pour permettre l'évaporation du dissolvant et éviter l'accumulation de vapeurs","Pour refroidir le moteur de la machine","Pour équilibrer la pression interne"],
+   exp:"La cheminée doit rester ouverte pour permettre l'évaporation du dissolvant et éviter tout risque lié à l'accumulation de vapeurs."},
+  {m:'securite',q:"Quelle vérification électrique doit être systématiquement effectuée avant utilisation ?",
+   opts:["Vérifier que la mise à la terre est correcte et qu'il n'y a pas de frottement entre les accessoires","Couper le disjoncteur principal pendant 10 secondes","Vérifier uniquement le câble d'alimentation"],
+   exp:"Il faut toujours vérifier la mise à la terre et l'absence de frottement entre accessoires avant toute utilisation de la machine."},
+  // ENTRETIEN
+  {m:'entretien',q:"À quelle fréquence le filtre de la pompe de lavage doit-il être nettoyé ?",
+   opts:["Une fois par semaine","Chaque jour","Une fois par mois"],
+   exp:"Le filtre de la pompe de lavage doit être nettoyé une fois par semaine pour maintenir les performances de la machine."},
+  {m:'entretien',q:"Quelle maintenance doit être effectuée sur les guides des portes de la machine à laver ?",
+   opts:["S'assurer qu'ils sont toujours graissés","Les nettoyer uniquement avec du solvant","Les remplacer chaque mois"],
+   exp:"Les guides des portes doivent toujours être graissés pour assurer un fonctionnement fluide et éviter leur usure prématurée."},
+  {m:'entretien',q:"Que faut-il vérifier concernant le frigo et la valve d'air lors du remplissage ?",
+   opts:["Vérifier que le frigo est en marche et que la valve d'air est ouverte","Arrêter le frigo pendant le remplissage","Fermer la valve d'air pour éviter les remontées de pression"],
+   exp:"Il faut toujours vérifier que le frigo est en marche et que la valve d'air est ouverte lors du processus de remplissage."},
+];
+
+let cur=0,score=0,answered=[],timerInterval=null,timeLeft=TIMER_DURATION;
+let conductor={},quizStartDate='',quizStartTime='',quizQuestions=[];
+
+function shuffleArray(a){const r=[...a];for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]];}return r;}
+function prepareQuestion(q){
+  const correct=q.opts[0];
+  const distractors=[q.opts[1],q.opts[2]];
+  const pos=Math.floor(Math.random()*3);
+  const newOpts=[...distractors];
+  newOpts.splice(pos,0,correct);
+  return{m:q.m,q:q.q,opts:newOpts,c:pos,exp:q.exp};
+}
+function prepareQuiz(){return shuffleArray([...BASE_QUESTIONS]).map(q=>prepareQuestion(q));}
+
+function updateClock(){
+  const now=new Date();
+  const df=document.getElementById('form-date'),tf=document.getElementById('form-time');
+  if(df)df.textContent=now.toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  if(tf)tf.textContent=now.toLocaleTimeString('fr-FR');
+}
+setInterval(updateClock,1000);updateClock();
+
+function startQuiz(){
+  const nom=document.getElementById('f-nom').value.trim(),mat=document.getElementById('f-matricule').value.trim(),poste=document.getElementById('f-poste').value.trim(),equipe=document.getElementById('f-equipe').value,responsable=document.getElementById('f-responsable').value.trim(),dept=document.getElementById('f-dept').value.trim();
+  if(!nom||!mat||!poste||!equipe||!responsable||!dept){alert('Veuillez remplir tous les champs obligatoires (*) avant de démarrer.');return;}
+  conductor={nom,matricule:mat,poste,equipe,responsable,dept};
+  const now=new Date();quizStartDate=now.toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});quizStartTime=now.toLocaleTimeString('fr-FR');
+  quizQuestions=prepareQuiz();
+  document.getElementById('form-screen').style.display='none';
+  document.getElementById('quiz-section').style.display='block';
+  document.getElementById('stat-total').textContent=quizQuestions.length;
+  cur=0;score=0;answered=new Array(quizQuestions.length).fill(null);load();
+}
+
+function startTimer(){
+  clearInterval(timerInterval);timeLeft=TIMER_DURATION;updateTimerUI();
+  timerInterval=setInterval(()=>{timeLeft--;updateTimerUI();if(timeLeft<=0){clearInterval(timerInterval);if(!answered[cur]){answered[cur]={selected:-1,correct:false,timeout:true};load();}}},1000);
+}
+function updateTimerUI(){
+  const fill=document.getElementById('timer-fill'),num=document.getElementById('timer-num');
+  if(!fill||!num)return;
+  fill.style.width=(timeLeft/TIMER_DURATION*100)+'%';num.textContent=timeLeft;
+  if(timeLeft<=4){fill.style.background='#D93025';num.className='timer-num urgent';}
+  else if(timeLeft<=7){fill.style.background='#E85A52';num.className='timer-num';}
+  else{fill.style.background='var(--blue-light)';num.className='timer-num';}
+}
+
+const MODULE_LABELS={remplissage:'💧 Remplissage',lavage:'🔄 Lavage',vidange:'🪣 Vidange',securite:'🛡️ Sécurité',entretien:'🔧 Entretien'};
+const MODULE_CLASSES={remplissage:'module-remplissage',lavage:'module-lavage',vidange:'module-vidange',securite:'module-securite',entretien:'module-entretien'};
+
+function load(){
+  const d=quizQuestions[cur];const isAns=answered[cur]!==null;const num=String(cur+1).padStart(2,'0');
+  const mt=document.getElementById('q-module-tag');mt.className='q-module-tag '+(MODULE_CLASSES[d.m]||'module-remplissage');mt.textContent=MODULE_LABELS[d.m]||'Module';
+  document.getElementById('q-tag').textContent=`Question ${num} / ${quizQuestions.length}`;
+  document.getElementById('q-num-bg').textContent=num;document.getElementById('question-text').textContent=d.q;
+  document.getElementById('prog-label').textContent=`${cur+1} / ${quizQuestions.length}`;
+  document.getElementById('prog-fill').style.width=`${((cur+1)/quizQuestions.length)*100}%`;
+  let s=0,w=0;answered.forEach(a=>{if(!a)return;if(a.correct)s++;else w++;});
+  document.getElementById('stat-correct').textContent=s;document.getElementById('stat-wrong').textContent=w;
+  const aC=answered.filter(a=>a!==null).length;document.getElementById('stat-pct').textContent=aC?Math.round((s/aC)*100)+'%':'—';score=s;
+  const si=isAns?answered[cur].selected:-1;const isTimeout=isAns&&answered[cur].timeout;
+  document.getElementById('options-list').innerHTML=d.opts.map((opt,i)=>{
+    let cls='';if(isAns){if(i===d.c){cls=isTimeout?' timeout':' correct';}else if(i===si&&i!==d.c){cls=' wrong';}}
+    return`<li class="option${cls}${isAns?' disabled':''}" onclick="pick(${i})"><span class="opt-letter">${LETTERS[i]}</span><span class="opt-text">${opt}</span></li>`;
+  }).join('');
+  document.getElementById('exp-text').textContent=d.exp;document.getElementById('explanation').style.display=isAns?'block':'none';
+  const ns=document.getElementById('nav-status');
+  if(isAns&&isTimeout){ns.innerHTML='<span style="color:#D93025;font-size:18px">⏰</span> Temps écoulé !';ns.style.color='#D93025';}
+  else if(isAns&&answered[cur].correct){ns.innerHTML='<span style="color:var(--blue-deep);font-size:18px">✓</span> Bonne réponse';ns.style.color='var(--blue-deep)';}
+  else if(isAns){ns.innerHTML='<span style="color:#D93025;font-size:18px">✗</span> Mauvaise réponse';ns.style.color='#D93025';}
+  else{ns.innerHTML='';}
+  document.getElementById('prev-btn').disabled=cur===0;
+  document.getElementById('next-btn').textContent=cur===quizQuestions.length-1?'Voir le résultat →':'Suivant →';
+  const card=document.getElementById('question-card');card.style.animation='none';card.offsetHeight;card.style.animation='fadeUp 0.38s cubic-bezier(0.23,1,0.32,1)';
+  if(!isAns){startTimer();}else{clearInterval(timerInterval);const f=document.getElementById('timer-fill'),n=document.getElementById('timer-num');if(f){f.style.width='0%';f.style.background='var(--border)';}if(n){n.textContent='—';n.className='timer-num';}}
+}
+function pick(i){if(answered[cur]!==null)return;clearInterval(timerInterval);answered[cur]={selected:i,correct:i===quizQuestions[cur].c,timeout:false};load();}
+function changeQuestion(s){if(s===1&&cur===quizQuestions.length-1){showScore();return;}clearInterval(timerInterval);cur=Math.max(0,Math.min(quizQuestions.length-1,cur+s));load();}
+
+function showScore(){
+  clearInterval(timerInterval);score=answered.filter(a=>a&&a.correct).length;
+  document.getElementById('quiz-section').style.display='none';document.getElementById('score-screen').style.display='block';
+  const pct=Math.round((score/quizQuestions.length)*100),wrong=quizQuestions.length-score;
+  document.getElementById('sc-num').textContent=score;document.getElementById('sc-den').textContent=`/ ${quizQuestions.length}`;
+  document.getElementById('chip-ok').textContent=`✓ ${score} correctes`;document.getElementById('chip-ko').textContent=`✗ ${wrong} incorrectes`;document.getElementById('chip-pct').textContent=`${pct}%`;
+  let title,msg,color;
+  if(pct>80){title='🏆 Certifié Machine à Laver';msg="Excellente maîtrise opérationnelle. Vous êtes certifié pour la conduite de la machine à laver.";color='var(--blue-deep)';}
+  else if(pct>=50){title='📋 Qualification partielle';msg='Bonne connaissance générale. Quelques points restent à consolider avant la validation finale.';color='var(--blue-mid)';}
+  else{title='📚 Formation complémentaire requise';msg='Des lacunes importantes ont été détectées. Une révision approfondie et une nouvelle session sont recommandées.';color='#D93025';}
+  document.getElementById('sc-title').textContent=title;document.getElementById('sc-title').style.color=color;document.getElementById('sc-msg').textContent=msg;
+  setTimeout(()=>{const rf=document.getElementById('ring-fill');rf.style.strokeDashoffset=440-(pct/100)*440;rf.style.stroke=color;},100);
+}
+
+function downloadFiche(){
+  score=answered.filter(a=>a&&a.correct).length;
+  const pct=Math.round((score/quizQuestions.length)*100),wrong=quizQuestions.length-score;
+  const endDate=new Date().toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'}),endTime=new Date().toLocaleTimeString('fr-FR');
+  let obs='';if(pct>80)obs="CERTIFIÉ — Habilité à conduire la machine à laver de manière autonome.";else if(pct>=50)obs='QUALIFICATION PARTIELLE — Un recyclage sur les points non maîtrisés est requis avant validation définitive.';else obs='NON CERTIFIÉ — Formation complémentaire obligatoire. Une nouvelle évaluation doit être planifiée.';
+  const obsColor=pct>80?'#003087':pct>=50?'#1A4DAD':'#D93025';const obsBg=pct>80?'rgba(0,48,135,0.07)':pct>=50?'rgba(26,77,173,0.06)':'rgba(217,48,37,0.07)';
+  const ficheHTML='<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Fiche Machine à Laver — '+conductor.nom+'</title><style>*{box-sizing:border-box;margin:0;padding:0;}html,body{width:210mm;min-height:297mm;background:#fff;margin:0;padding:0;}body{font-family:Arial,Helvetica,sans-serif;color:#1a2535;font-size:11pt;line-height:1.5;}.page{width:100%;padding:14mm 14mm 12mm;}.header{display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:5px solid #003087;margin-bottom:16px;}.header-left{display:flex;align-items:center;gap:14px;}.logo-box{border:1px solid #cdd8e3;border-radius:6px;padding:4px 12px;background:#fff;display:flex;align-items:center;}.logo-box img{height:40px;width:auto;display:block;}.co-name{font-size:13pt;font-weight:700;color:#003087;}.co-sub{font-size:8pt;color:#7a90a8;text-transform:uppercase;letter-spacing:1px;margin-top:2px;}.header-dates{text-align:right;font-size:9pt;color:#1a2535;line-height:2;font-weight:600;}.doc-title{text-align:center;margin-bottom:14px;}.doc-title h1{font-size:16pt;font-weight:800;color:#003087;margin-bottom:3px;}.doc-title p{font-size:9pt;color:#7a90a8;}.info-table{width:100%;border-collapse:collapse;margin-bottom:16px;background:#f4f7fb;}.info-table td{padding:7px 14px;font-size:10pt;vertical-align:middle;}.info-table td.lbl{font-size:8.5pt;font-weight:700;text-transform:uppercase;color:#7a90a8;width:22%;}.info-table td.val{font-weight:600;color:#1a2535;}.info-table tr{border-bottom:1px solid #dce6f0;}.info-table tr:last-child{border-bottom:none;}.score-section{display:flex;align-items:center;gap:28px;margin-bottom:16px;padding:16px 20px;border:1.5px solid #dce6f0;border-radius:10px;background:#f9fbfd;}.ring-wrap{position:relative;width:110px;height:110px;flex-shrink:0;}.ring-wrap svg{width:110px;height:110px;transform:rotate(-90deg);display:block;}.ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}.ring-pct{font-size:24pt;font-weight:800;line-height:1;}.ring-frac{font-size:9pt;color:#7a90a8;margin-top:2px;}.score-details{flex:1;}.score-details h2{font-size:14pt;font-weight:800;margin-bottom:10px;}.score-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}.sc-chip{padding:8px 14px;border-radius:7px;font-size:11pt;font-weight:700;text-align:center;}.obs-box{border-left:5px solid;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:20px;}.obs-label{font-size:8pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}.obs-text{font-size:11.5pt;font-weight:700;}.sig-section{margin-top:16px;}.sig-title{font-size:9pt;font-weight:700;text-transform:uppercase;color:#7a90a8;border-bottom:1.5px solid #003087;padding-bottom:5px;margin-bottom:6px;}.sig-row{display:flex;gap:32px;}.sig-box{flex:1;}.sig-name-lbl{font-size:9pt;font-weight:700;color:#1a2535;}.sig-name-val{font-size:10pt;font-weight:600;color:#003087;margin-top:2px;margin-bottom:2px;}.sig-line{border-top:1.5px dashed #bbc8d8;margin-top:28px;}.sig-caption{font-size:8pt;color:#9aafbf;margin-top:4px;text-align:center;}.footer{margin-top:18px;padding-top:8px;border-top:1px solid #dce6f0;text-align:center;font-size:8pt;color:#aabccc;}.confidential{font-size:8pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#bbc8d8;margin-bottom:3px;}@media print{@page{size:A4 portrait;margin:0;}.page{padding:12mm;}body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}</style></head><body><div class="page"><div class="header"><div class="header-left"><div class="logo-box"><img src="amcor.png" alt="Amcor"></div><div><div class="co-name">Amcor Flexibles</div><div class="co-sub">Mohammedia &middot; Maroc</div></div></div><div class="header-dates"><div>D&eacute;but&nbsp;: '+quizStartDate+' — '+quizStartTime+'</div><div>Fin&nbsp;&nbsp;&nbsp;&nbsp;: '+endDate+' — '+endTime+'</div></div></div><div class="doc-title"><h1>Fiche de R&eacute;sultat &mdash; Certification Machine &agrave; Laver</h1><p>&Eacute;valuation des comp&eacute;tences op&eacute;rationnelles &middot; '+quizQuestions.length+' questions &middot; 25 s / question</p></div><table class="info-table"><tr><td class="lbl">Nom complet</td><td class="val">'+conductor.nom+'</td><td class="lbl">Matricule</td><td class="val">'+conductor.matricule+'</td></tr><tr><td class="lbl">Poste / Fonction</td><td class="val">'+conductor.poste+'</td><td class="lbl">&Eacute;quipe</td><td class="val">'+conductor.equipe+'</td></tr><tr><td class="lbl">Resp. Production</td><td class="val">'+conductor.responsable+'</td><td class="lbl">D&eacute;partement</td><td class="val">'+conductor.dept+'</td></tr></table><div class="score-section"><div class="ring-wrap"><svg viewBox="0 0 110 110"><circle fill="none" stroke="#dce6f0" stroke-width="10" cx="55" cy="55" r="45"/><circle fill="none" stroke="'+obsColor+'" stroke-width="10" cx="55" cy="55" r="45" stroke-dasharray="282.7" stroke-dashoffset="'+(282.7-(pct/100)*282.7)+'" stroke-linecap="round"/></svg><div class="ring-center"><div class="ring-pct" style="color:'+obsColor+'">'+pct+'%</div><div class="ring-frac">'+score+' / '+quizQuestions.length+'</div></div></div><div class="score-details"><h2 style="color:'+obsColor+'">'+(pct>80?'&#127942; Certifi&eacute;':pct>=50?'&#128203; Qualification partielle':'&#128218; Formation requise')+'</h2><div class="score-grid"><div class="sc-chip" style="background:rgba(0,48,135,0.08);color:#003087;border:1.5px solid rgba(0,48,135,0.18);">&#10003; '+score+' correctes</div><div class="sc-chip" style="background:rgba(217,48,37,0.08);color:#D93025;border:1.5px solid rgba(217,48,37,0.2);">&#10007; '+wrong+' incorrectes</div><div class="sc-chip" style="background:#f4f7fb;color:#007A7A;border:1.5px solid #dce6f0;grid-column:1/-1;">'+quizQuestions.length+' questions &middot; 25 s / question</div></div></div></div><div class="obs-box" style="border-color:'+obsColor+';background:'+obsBg+';"><div class="obs-label" style="color:'+obsColor+'">Observation &amp; D&eacute;cision</div><div class="obs-text" style="color:'+obsColor+'">'+obs+'</div></div><div class="sig-section"><div class="sig-title">Signatures &amp; Visas</div><div class="sig-row"><div class="sig-box"><div class="sig-name-lbl">Conducteur &eacute;valu&eacute;</div><div class="sig-name-val">'+conductor.nom+'</div><div class="sig-line"></div><div class="sig-caption">Signature</div></div><div class="sig-box"><div class="sig-name-lbl">Responsable de Production</div><div class="sig-name-val">'+conductor.responsable+'</div><div class="sig-line"></div><div class="sig-caption">Visa &amp; Cachet</div></div></div></div><div class="footer"><div class="confidential">Document confidentiel &mdash; Usage interne</div>Amcor Flexibles Mohammedia &middot; Certification Machine &agrave; Laver &middot; G&eacute;n&eacute;r&eacute; le '+endDate+'</div></div><scr'+'ipt>setTimeout(function(){window.print();},500);</scr'+'ipt></body></html>';
+  const pw=window.open('','_blank');if(!pw){alert('Veuillez autoriser les popups pour ce site.');return;}pw.document.open();pw.document.write(ficheHTML);pw.document.close();
+}
+function restart(){clearInterval(timerInterval);cur=0;score=0;answered=[];document.getElementById('score-screen').style.display='none';document.getElementById('form-screen').style.display='block';}
+</script>
+</body>
+</html>
